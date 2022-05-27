@@ -1,12 +1,12 @@
 import "./App.css";
-import ControlledUseForm from "./components/ControlledUseForm";
-import LoginForm from "./components/LoginForm";
+import RegistrationForm from "./components/RegistrationForm";
+import UserProfileForm from "./components/UserProfileForm";
 
 function App() {
   return (
     <div className="App">
-      <ControlledUseForm />
-      <LoginForm />
+      <RegistrationForm />
+      <UserProfileForm />
     </div>
   );
 }

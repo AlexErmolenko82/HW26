@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-const LoginForm = () => {
+const UserProfileForm = () => {
   const {
     register,
     handleSubmit,
@@ -47,12 +47,11 @@ const LoginForm = () => {
       </div>
       <div>
         <button type="submit">Submit</button>
-        <button type="button" onClick={() => reset()}>
-          Reset
-        </button>
+        {/* <button type="button" onClick={() => reset()}> */}
+        <button type="reset">Reset</button>
       </div>
     </form>
   );
 };
 
-export default LoginForm;
+export default UserProfileForm;

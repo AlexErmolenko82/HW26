@@ -1,6 +1,7 @@
 import { useState } from "react";
+import isValidEmail from "../helpers/validators";
 
-const ControlledUseForm = () => {
+const RegistrationForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -36,12 +37,6 @@ const ControlledUseForm = () => {
     setErrorEmailMsg("");
     setErrorPasswordMsg("");
     setErrorPasswordConfirmMsg("");
-
-    function isValidEmail(email) {
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.trim()))
-        return true;
-      else return false;
-    }
 
     if (!isValidEmail(email)) {
       setErrorEmailMsg(` << Wrong email! Email is a required field`);
@@ -113,4 +108,4 @@ const ControlledUseForm = () => {
   );
 };
 
-export default ControlledUseForm;
+export default RegistrationForm;
